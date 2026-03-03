@@ -69,7 +69,7 @@ def find_elbow_from_df(df, x_col="vocab_size", y_col="score"):
 
     elbow_index = np.argmax(distances)
 
-    return int(df_sorted.loc[elbow_index, x_col])
+    return int(df_sorted.loc[elbow_index+1, x_col])
 
 
 if __name__ == "__main__":
