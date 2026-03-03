@@ -131,17 +131,22 @@ This work will eventually support RAG systems where:
 
 ```
 metal-mind/
-├── artifacts/
-│   ├── tokenizer/         # SentencePiece models & vocab
-│   └── checkpoints/       # Embedding model weights (work in progress)
-├── core/
-│   ├── evaluation/        # Scoring & visualization code
-│   └── utils/             # Helpers for text, metrics, data
-├── development/           # configs, experiments records
-│   └── train-tokens.py             # Tokenizer training code
-├── requirements.txt
-├── pyproject.toml
-└── README.md              # ← This updated file
+├── 📁 artifacts
+│   ├── 📄 metal-mind-tokenizer.model
+│   ├── 📄 metal-mind-tokenizer.vocab
+│   └── 📄 tokenizer_ablation_results.csv
+├── 📁 core
+│   ├── 🐍 __init__.py
+│   ├── 🐍 evaluate.py
+│   └── 🐍 logging.py
+├── 📁 development
+│   └── 🐍 train-tokenizer.py
+├── 📁 logs
+├── ⚙️ .gitignore
+├── 📄 LICENSE
+├── 📝 README.md
+├── ⚙️ pyproject.toml
+└── 📄 requirements.txt
 ```
 
 ---
