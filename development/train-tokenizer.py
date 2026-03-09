@@ -96,6 +96,11 @@ if __name__ == "__main__":
             vocab_size=size,
             character_coverage=1.0,
             minloglevel=2,
+            pad_id=0,
+            unk_id=1,
+            bos_id=2,
+            eos_id=3,
+            user_defined_symbols=["[CLS]", "[SEP]", "[MASK]"]
         )
 
         logger.info(f"Tokenizer trained: vocab_size={size}")
@@ -171,13 +176,18 @@ if __name__ == "__main__":
     final_model_path = ARTIFACT_DIR / MODEL_PREFIX
 
     spm.SentencePieceTrainer.train(
-        input=str(RAW_CORPUS_TXT),
-        model_prefix=str(final_model_path),
-        model_type="unigram",
-        vocab_size=best_vocab,
-        character_coverage=1.0,
-        minloglevel=2,
-    )
+            input=str(RAW_CORPUS_TXT),
+            model_prefix=str(final_model_path),
+            model_type="unigram",
+            vocab_size=best_vocab,
+            character_coverage=1.0,
+            minloglevel=2,
+            pad_id=0,
+            unk_id=1,
+            bos_id=2,
+            eos_id=3,
+            user_defined_symbols=["[CLS]", "[SEP]", "[MASK]"]
+        )
 
     logger.info("Final tokenizer trained")
 

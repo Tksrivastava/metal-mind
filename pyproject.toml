@@ -27,7 +27,8 @@ dependencies = [
     "nbformat==5.10.4",
     "kaleido==0.2.1",
     "pylint==3.2.0",
-    "sentencepiece==0.2.1"
+    "sentencepiece==0.2.1",
+    "tensorflow-text==2.15.0"
 ]
 
 [tool.setuptools.packages.find]
